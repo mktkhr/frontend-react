@@ -1,0 +1,45 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 80,
+    "bracketSpacing": true,
+    "ignore": ["**/node_modules", "**/dist"]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "nursery": {
+        "noRestrictedImports": "error"
+      },
+      "style": {
+        "noVar": "error",
+        "useConst": "error"
+      },
+      "complexity": {
+        "noUselessCatch": "error"
+      }
+    },
+    "ignore": ["**/node_modules", "**/dist", "bun.lock"]
+  },
+  "overrides": [
+    {
+      "include": [".storybook/preview.tsx"],
+      "linter": {
+        "rules": {
+          "nursery": {
+            "noRestrictedImports": "off"
+          }
+        }
+      }
+    }
+  ]
+}
