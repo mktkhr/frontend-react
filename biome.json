@@ -10,6 +10,9 @@
     "bracketSpacing": true,
     "ignore": ["**/node_modules", "**/dist"]
   },
+  "organizeImports": {
+    "enabled": true
+  },
   "linter": {
     "enabled": true,
     "rules": {
@@ -25,7 +28,7 @@
         "noUselessCatch": "error"
       }
     },
-    "ignore": ["**/node_modules", "**/dist"]
+    "ignore": ["**/node_modules", "**/dist", "bun.lock"]
   },
   "overrides": [
     {
